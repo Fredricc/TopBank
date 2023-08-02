@@ -95,7 +95,7 @@ namespace TopBank
             Console.WriteLine("4. View Customers");
             Console.WriteLine("00. Back to Main Menu");
 
-            //accept cus
+            //accept customers choice
 
         } while (customerMenuChoice != 0);
     }
