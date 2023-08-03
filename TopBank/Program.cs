@@ -46,7 +46,7 @@ namespace TopBank
                 do
                 {
 
-                    Console.WriteLine("\n::: Main Menu here:::");
+                    Console.WriteLine("\n::: Main Menu :::");
                     Console.WriteLine("1.Customers");
                     Console.WriteLine("2.Accounts");
                     Console.WriteLine("3.Funds Transfer");
@@ -61,7 +61,7 @@ namespace TopBank
                     switch (mainMenuChoice)
                     {
                         case 1: CustomersMenu(); break;
-                        case 2: break; //TO DO:Display accounts menu
+                        case 2: AccountsMenu();  break;
                         case 3: break; //TO DO:Display funds transfer menu
                         case 4: break; //TO DO:Display funds transfer statement menu
                         case 5: break; //TO DO:Display account menu
@@ -78,7 +78,6 @@ namespace TopBank
             Console.WriteLine("Thank you! Visit again.");
             Console.ReadKey();
         }
-    }
     static void CustomersMenu()
     {
         //variable to store customers menu choice
@@ -88,7 +87,7 @@ namespace TopBank
         do
         {
             //print customers menu
-            Console.WriteLine("\n:::Customers menu:::");
+            Console.WriteLine("\n::: Customers menu :::");
             Console.WriteLine("1. Add Customer");
             Console.WriteLine("2. Delete Customer");
             Console.WriteLine("3. Update Customer");
@@ -96,7 +95,32 @@ namespace TopBank
             Console.WriteLine("00. Back to Main Menu");
 
             //accept customers choice
+            Console.WriteLine("Enter Choice: ");
+            customerMenuChoice = Convert.ToInt32(Console.ReadLine());
 
         } while (customerMenuChoice != 0);
+    }
+        static void AccountsMenu()
+        {
+            //variable to store accounts menu choice
+            int accountsMenuChoice = -1;
+
+            //do-while loop starts
+            do
+            {
+                //print accounts menu
+                Console.WriteLine("\n::: Accounts menu :::");
+                Console.WriteLine("1. Add Account");
+                Console.WriteLine("2. Delete Account");
+                Console.WriteLine("3. Update Account");
+                Console.WriteLine("4. View Account");
+                Console.WriteLine("00. Back to Main Menu");
+
+                //accept customers choice
+                Console.WriteLine("Enter Choice: ");
+                accountsMenuChoice = Convert.ToInt32(Console.ReadLine());
+
+            } while (accountsMenuChoice != 0);
+        }
     }
 }
